@@ -1,0 +1,244 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7619,        236]
+NotebookOptionsPosition[      6452,        207]
+NotebookOutlinePosition[      6871,        223]
+CellTagsIndexPosition[      6828,        220]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Solve", " ", "the", " ", "differential", " ", "equation"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"sol", "=", 
+     RowBox[{"DSolve", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"y", "'"}], "[", "t", "]"}], "-", 
+           RowBox[{"t", " ", 
+            RowBox[{"Exp", "[", 
+             RowBox[{"3", "t"}], "]"}]}], "+", 
+           RowBox[{"2", " ", 
+            RowBox[{"y", "[", "t", "]"}]}]}], "==", "0"}], ",", 
+         RowBox[{
+          RowBox[{"y", "[", "0", "]"}], "==", "0"}]}], "}"}], ",", 
+       RowBox[{"y", "[", "t", "]"}], ",", "t"}], "]"}]}], ";"}], "\n", 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Display", " ", "the", " ", "solution"}], "*)"}], 
+   "\[IndentingNewLine]", "sol", "\n"}]}]], "Input",
+ CellChangeTimes->{{3.9219860362928743`*^9, 3.921986170374257*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"103081a8-f205-43db-886a-a6b1789d11cf"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     FractionBox["1", "25"], " ", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       RowBox[{"-", "2"}], " ", "t"}]], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"5", " ", "t"}]], "+", 
+       RowBox[{"5", " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{"5", " ", "t"}]], " ", "t"}]}], ")"}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.9219861222134895`*^9, 3.9219861712200966`*^9}},
+ CellLabel->"Out[8]=",ExpressionUUID->"bf261e3b-ab2e-40f0-9dd9-6fc1b84ec2a5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"sol1", "=", 
+    RowBox[{"DSolve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"y", "'"}], "[", "t", "]"}], "==", 
+         RowBox[{"1", "-", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"t", "-", 
+             RowBox[{"y", "[", "t", "]"}]}], ")"}], "^", "2"}]}]}], ",", 
+        RowBox[{
+         RowBox[{"y", "[", "2", "]"}], "==", "1"}]}], "}"}], ",", 
+      RowBox[{"y", "[", "t", "]"}], ",", "t"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Display", " ", "the", " ", "solution"}], 
+   "*)"}]}], "\n", "sol1", "\n"}], "Input",
+ CellChangeTimes->{{3.9219861660179143`*^9, 3.9219862303099813`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"9a1d3609-7add-42fa-b73d-6172629f32f3"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+    FractionBox[
+     RowBox[{"1", "-", 
+      RowBox[{"3", " ", "t"}], "+", 
+      SuperscriptBox["t", "2"]}], 
+     RowBox[{
+      RowBox[{"-", "3"}], "+", "t"}]]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{{3.9219862235858*^9, 3.92198623116129*^9}},
+ CellLabel->"Out[12]=",ExpressionUUID->"d7e241c5-7050-4fe5-9f5a-4bb5716ae4c1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"sol2", "=", 
+    RowBox[{"DSolve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"y", "'"}], "[", "t", "]"}], "==", 
+         RowBox[{"1", "+", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"y", "[", "t", "]"}], "/", "t"}], ")"}]}]}], ",", 
+        RowBox[{
+         RowBox[{"y", "[", "1", "]"}], "==", "2"}]}], "}"}], ",", 
+      RowBox[{"y", "[", "t", "]"}], ",", "t"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Display", " ", "the", " ", "solution"}], 
+   "*)"}]}], "\n", "sol2", "\n"}], "Input",
+ CellChangeTimes->{{3.921986247032091*^9, 3.9219862680931845`*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"b681b4d9-8a25-4542-85e8-f3e6583eb2fb"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     RowBox[{"2", " ", "t"}], "+", 
+     RowBox[{"t", " ", 
+      RowBox[{"Log", "[", "t", "]"}]}]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.9219862687508326`*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"99710d6a-616e-4815-a1d2-1f2bd0b6a376"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"sol3", "=", 
+    RowBox[{"DSolve", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"y", "'"}], "[", "t", "]"}], "==", 
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", "t"}], "]"}], "+", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"3", "t"}], "]"}]}]}], ",", 
+        RowBox[{
+         RowBox[{"y", "[", "0", "]"}], "==", "1"}]}], "}"}], ",", 
+      RowBox[{"y", "[", "t", "]"}], ",", "t"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"Display", " ", "the", " ", "solution"}], 
+   "*)"}]}], "\[IndentingNewLine]", "sol3", "\n"}], "Input",
+ CellChangeTimes->{{3.9219862773078213`*^9, 3.92198630264202*^9}, {
+  3.9219871595536604`*^9, 3.921987159938294*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"1cc4d8a2-d912-4b25-a12a-108a97159210"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], "\[Rule]", 
+    RowBox[{
+     FractionBox["1", "6"], " ", 
+     RowBox[{"(", 
+      RowBox[{"8", "-", 
+       RowBox[{"2", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"3", " ", "t"}], "]"}]}], "+", 
+       RowBox[{"3", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"2", " ", "t"}], "]"}]}]}], ")"}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.921986303273132*^9, 3.9219871605298953`*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"0bbfce61-437e-4c54-a7c4-aeb3bd66ddc2"]
+}, Open  ]]
+},
+WindowSize->{574.8, 573.6},
+WindowMargins->{{Automatic, -4.7999999999999545`}, {Automatic, 0}},
+FrontEndVersion->"13.3 for Microsoft Windows (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2e0e70d7-153d-4255-bc45-7ae23b2c23db"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1061, 29, 124, "Input",ExpressionUUID->"103081a8-f205-43db-886a-a6b1789d11cf"],
+Cell[1644, 53, 682, 19, 48, "Output",ExpressionUUID->"bf261e3b-ab2e-40f0-9dd9-6fc1b84ec2a5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2363, 77, 866, 24, 105, "Input",ExpressionUUID->"9a1d3609-7add-42fa-b73d-6172629f32f3"],
+Cell[3232, 103, 437, 12, 50, "Output",ExpressionUUID->"d7e241c5-7050-4fe5-9f5a-4bb5716ae4c1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3706, 120, 830, 23, 105, "Input",ExpressionUUID->"b681b4d9-8a25-4542-85e8-f3e6583eb2fb"],
+Cell[4539, 145, 367, 10, 32, "Output",ExpressionUUID->"99710d6a-616e-4815-a1d2-1f2bd0b6a376"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4943, 160, 909, 25, 105, "Input",ExpressionUUID->"1cc4d8a2-d912-4b25-a12a-108a97159210"],
+Cell[5855, 187, 581, 17, 96, "Output",ExpressionUUID->"0bbfce61-437e-4c54-a7c4-aeb3bd66ddc2"]
+}, Open  ]]
+}
+]
+*)
+
