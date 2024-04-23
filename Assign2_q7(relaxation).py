@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -27,6 +22,14 @@ def relaxation_ode_solver(f,y0,y_last,t_arr,tol=1e-4,max_iter=int(1e6)):
             return y_mat[0:i],i
     return y_mat,"soln did not converge"
 
+def exact_soln(t_arr,args):
+    t0=args[0]
+    x0=args[1]
+    t1=args[2]
+    x1=args[3]
+    u0=(x1+(0.5*g*(t1**2)))/t1
+    return x0+(u0*t_arr)-(0.5*g*(t_arr**2))
+
 t0=0
 t1=10
 x0=0
@@ -35,21 +38,17 @@ t_arr=np.linspace(t0,t1,100)
 
 y_mat,iteration=relaxation_ode_solver(y_double_deriv_arr,x0,x1,t_arr)
 print("Number of iterations it took for convergence: ",iteration)
-iter_arr=[1,10,100,1000,10000,iteration]
+iter_arr=[10,100,1000,10000,iteration]
+
+y_true=exact_soln(t_arr,[t0,x0,t1,x1])
 
 for i in iter_arr:
     plt.plot(t_arr,y_mat[i-1,:],label=str(i)+" iteration")
-plt.legend()
+plt.plot(t_arr,y_true,label="exact soln")
+plt.legend(loc="upper right")
 plt.grid()
 plt.xlabel("t")
 plt.ylabel("y(t)")
 plt.title("Solving BVP using Relaxation method")
 #plt.savefig("Plot7")
 plt.show()
-
-
-# In[ ]:
-
-
-
-
