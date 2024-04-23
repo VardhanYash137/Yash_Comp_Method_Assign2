@@ -17,7 +17,7 @@ def ode_fun(t,y):
     d2y = -g
     return [dy, d2y]
 
-def exact_soln(t,args):
+def exact_soln(t_arr,args):
     t0=args[0]
     x0=args[1]
     t1=args[2]
